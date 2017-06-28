@@ -40,7 +40,7 @@ services:
       - "1883:1883"
 
   iotagent:
-    image: "iotmid-docker:5000/jenkins/iotagent-json:ddeb9e0"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/iotagent-json:ddeb9e0"
     restart: always
     depends_on:
       - mongodb
@@ -55,7 +55,7 @@ services:
           - idas
 
   gui:
-    image: "iotmid-docker:5000/jenkins/devm-gui:118bb38"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/devm-gui:ebc4cce"
     restart: always
 
   orion:
@@ -86,7 +86,7 @@ services:
   #         - cygnus
 
   device-manager:
-    image: "iotmid-docker:5000/jenkins/devicemanager:0347578"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/devicemanager:41d33b4"
     restart: always
     depends_on:
       - mongodb
@@ -96,7 +96,7 @@ services:
           - devm
 
   orch:
-    image: "iotmid-docker:5000/jenkins/node-orch:d1e5d63"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/node-orch:149d72b"
     restart: always
     depends_on:
       - mongodb
@@ -106,7 +106,7 @@ services:
           - orchestrator
 
   auth:
-    image: "iotmid-docker:5000/jenkins/auth:ab5b34a"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/auth:64951d8"
     restart: always
     depends_on:
       - mongodb
@@ -158,7 +158,7 @@ services:
     command: -perseo_fe_url perseo-fe:9090
 
   perseo-fe:
-    image: "iotmid-docker:5000/jenkins/perseo-fe:30f0eb7"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/perseo-fe:30f0eb7"
     restart: always
     ports:
       - "127.0.0.1:9090:9090"
@@ -171,5 +171,5 @@ services:
       - PERSEO_ORION_URL=http://orion:1026/NGSI10/updateContext
 
   mashup:
-    image: "iotmid-docker:5000/jenkins/mashup-nodes:9292e1a"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/mashup-nodes:b07f8cc"
     restart: always
