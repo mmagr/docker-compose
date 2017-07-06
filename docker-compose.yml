@@ -43,7 +43,7 @@ services:
           - idas
 
   gui:
-    image: "iotmid-docker.cpqd.com.br:5000/jenkins/devm-gui:ebc4cce"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/devm-gui:e75c4d9"
     restart: always
 
   orion:
@@ -74,7 +74,7 @@ services:
   #         - cygnus
 
   device-manager:
-    image: "iotmid-docker.cpqd.com.br:5000/jenkins/devicemanager:41d33b4"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/devicemanager:bfef486"
     restart: always
     depends_on:
       - mongodb
@@ -84,7 +84,7 @@ services:
           - devm
 
   orch:
-    image: "iotmid-docker.cpqd.com.br:5000/jenkins/node-orch:149d72b"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/node-orch:e2e1644"
     restart: always
     depends_on:
       - mongodb
@@ -159,5 +159,5 @@ services:
       - PERSEO_ORION_URL=http://orion:1026/NGSI10/updateContext
 
   mashup:
-    image: "iotmid-docker.cpqd.com.br:5000/jenkins/mashup-nodes:b07f8cc"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/mashup-nodes:b3111d4"
     restart: always
