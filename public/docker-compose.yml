@@ -171,5 +171,5 @@ services:
       - PERSEO_ORION_URL=http://orion:1026/NGSI10/updateContext
 
   mashup:
-    image: "iotmid-docker.cpqd.com.br:5000/jenkins/mashup-nodes:b3111d4"
+    image: "iotmid-docker.cpqd.com.br:5000/jenkins/mashup-nodes:663bc28"
     restart: always
