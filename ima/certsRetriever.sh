@@ -11,7 +11,7 @@ apt-get update
 apt-get install -y certbot
 
 
-cn="$(hostname).ima.sp.gov.br"
+cn="$2"
 certbot register -m "$1" --no-eff-email --agree-tos
 certbot certonly --standalone -d "$cn"
 
