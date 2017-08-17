@@ -130,7 +130,7 @@ authConfig "flows"
     "name": "history",
     "uris": "/history",
     "strip_uri": true,
-    "upstream_url": "http://sth:8666"
+    "upstream_url": "http://history:8000"
 }
 PAYLOAD
 authConfig "history"
